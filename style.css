@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Caveat";
+    src: url(/fonts/Caveat-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "FugazOne";
+    src: url(/fonts/FugazOne-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/background.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 2%;
+}
+
+.logo {
+    float: left;
+    cursor: pointer;
+    padding-left: -100px;
+    margin-left: -60px;
+    margin-top: -20px;
+}
+
+.content {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.content-image {
+    text-align: left;
+}
+
+.content-text {
+    color: rgb(203, 181, 124);
+    font-family: 'FugazOne', sans-serif;
+    font-size: 25px;
+    position: relative;
+    bottom: -150px;
+    left: 30px;
+}
+
+.first-sentence {
+    white-space: nowrap;
+    width: 400px;
+    border-right: 2px solid transparent;
+    overflow: hidden;
+    animation: control-width 3s both, blink .5s;
+}
+
+.rest-of-text {
+    animation: rest-of-text-animation 1s 3s linear alternate both;
+}
+
+.stars {
+    position: absolute;
+    left: 500px;
+    top: -100px;
+}
+
+@keyframes control-width {
+    from {
+        width: 0;
+    }
+    to {
+        width: 400px;
+    }
+}
+
+@keyframes rest-of-text-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
